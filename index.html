@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro de candidatos</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css"
+        integrity="sha384- + TCVv/72KpYfoDIlOyO1N0zB25ltxjKQ2zo9f8 + iXoPnpKj/kPngsXdKxiTpW1" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+    <body>
+        <div class="container">
+            <form id="formulario" action="#" method="post">
+                <h1>Desafio - Cadastro</h1>
+                <h2>Cadastro de candidatos - Automacao</h2>
+
+                <div class="form-group">
+                    <label for="nome">Nome:</label>
+                    <input type="text" class="form-control" id="nome" name="nome">
+                </div>
+
+                <div class="form-group">
+                    <label for="sobrenome">Sobrenome:</label>
+                    <input type="text" class="form-control" id="sobrenome" name="sobrenome">
+                </div>
+
+                <div class="form-group">
+                    <label>Sexo:</label>
+                    <div class="form-check">
+                        <input type="radio" class="form-check-input" id="masculino" name="sexo" value="masculino">
+                        <label class="form-check-label" for="masculino">Masculino</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="radio" class="form-check-input" id="feminino" name="sexo" value="feminino">
+                        <label class="form-check-label" for="feminino">Feminino</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="radio" class="form-check-input" id="outro" name="sexo" value="outro">
+                        <label class="form-check-label" for="outro">Outro</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="conhecimentos">Conhecimentos:</label><br>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="checkbox" id="java" value="java">
+                      <label class="form-check-label" for="java">Java</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="checkbox" id="selenium" value="selenium">
+                      <label class="form-check-label" for="selenium">Selenium</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="checkbox" id="react" value="react">
+                      <label class="form-check-label" for="react">React</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="checkbox" id="junit" value="junit">
+                      <label class="form-check-label" for="junit">Junit</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="checkbox" id="javascript" value="javascript">
+                      <label class="form-check-label" for="javascript">JavaScript</label>
+                    </div>
+                  </div>
+
+                <div class="form-group">
+                    <label>Áreas de interesse (mínimo 1):</label>
+                    <select id="area-interesse" class="form-control" multiple>
+                        <option value="Frontend">Frontend</option>
+                        <option value="Backend">Backend</option>
+                        <option value="Testes">Testes</option>
+                        <option value="Devops">DevOps</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Área principal:</label>
+                    <select id="motivacao" class="form-control">
+                        <option value="" selected disabled>Selecione uma opção</option>
+                        <option value="Drontend">Frontend</option>
+                        <option value="Backend">Backend</option>
+                        <option value="Testes">Testes</option>
+                        <option value="Devops">DevOps</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="porque">Por que você quer a vaga?</label>
+                    <textarea class="form-control" id="porque" name="porque" rows="3"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <button type="button" class="btn btn-secondary" id="btn-info">Mais Informações</button>
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </div>
+
+            </form>
+        </div>
+        <hr/>
+          <h1 class="text-center mb-4">Seus de Cadastros</h1>
+          <div class="container">
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Sobrenome</th>
+                    <th scope="col">Sexo</th>
+                    <th scope="col">Áreas de interesse</th>
+                    <th scope="col">Área de principal</th>
+                  </tr>
+                </thead>
+                <tbody id="table-cadastros-body">
+                </tbody>
+              </table>
+          </div>
+        <script src="index.js"></script>
+        <hr/>
+    </body>
+    <footer class="footer mt-auto py-3">
+        <div class="container text-center">
+          <span class="text-muted">&copy; 2023 <a href="https://www.linkedin.com/in/igor-mascarenhas/" target="_blank">Professor Igor Mascarenhas</a>. Código para aulas de automação.</span>
+        </div>
+      </footer>
+      
+</html>
